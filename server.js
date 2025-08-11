@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 
 // ===== Middleware =====
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"public"))); // Serve frontend files
 
@@ -192,10 +192,7 @@ app.put("/api/settings", async (req, res) => {
 
 // ===== SPA Frontend Fallback =====
 app.get(/^\/(?!api).*/, (req, res) => {
-
-
-
-  res.send("Frontend not deployed yet");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/api", (req, res) => {
