@@ -63,7 +63,7 @@ const Settings = mongoose.model(
 
 // ===== API Routes =====
 
-// --- Products ---
+// --- Products ----
 app.get("/api/products", async (req, res) => {
   try {
     const products = await Product.find();
