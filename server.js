@@ -10,7 +10,7 @@ const app = express();
 // ===== Middleware =====
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "./frontend/admin/admin.html"))); // Serve frontend files
+app.use(express.static(path.join(__dirname,"public"))); // Serve frontend files
 
 // ===== MongoDB Connection =====
 mongoose
