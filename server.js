@@ -10,7 +10,7 @@ const app = express();
 // ===== Middleware =====
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname,"public"))); // Serve frontend files
+
 
 // ===== MongoDB Connection =====
 mongoose
@@ -191,9 +191,7 @@ app.put("/api/settings", async (req, res) => {
 });
 
 // ===== SPA Frontend Fallback =====
-app.get(/^\/(?!api).*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+
 
 app.get("/api", (req, res) => {
   res.json({ message: "Welcome to the Restaurant Ordering System API" });
