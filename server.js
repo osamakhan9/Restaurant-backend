@@ -192,7 +192,10 @@ app.put("/api/settings", async (req, res) => {
 
 // ===== SPA Frontend Fallback =====
 app.get(/^\/(?!api).*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+
+
+
+  res.send("Frontend not deployed yet");
 });
 
 app.get("/api", (req, res) => {
