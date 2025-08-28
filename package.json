@@ -16,9 +16,12 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.1",
-    "path": "^0.12.7"
+    "multer": "^2.0.2",
+    "path": "^0.12.7",
+    "twilio": "^5.8.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
